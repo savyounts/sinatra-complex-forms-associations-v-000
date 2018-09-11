@@ -25,7 +25,7 @@ class OwnersController < ApplicationController
 
   patch '/owners/:id' do
     binding.pry
-    "Hello Wolrd"
+    
   end
 
   get '/owners/:id' do
