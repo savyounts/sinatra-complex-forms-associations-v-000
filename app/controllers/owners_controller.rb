@@ -26,7 +26,7 @@ class OwnersController < ApplicationController
   patch '/owners/:id' do
     binding.pry
     @owner = Owner.find(params[:id])
-    
+
   end
 
   get '/owners/:id' do
