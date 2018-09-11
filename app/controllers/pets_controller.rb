@@ -38,7 +38,7 @@ class PetsController < ApplicationController
       @pet.name = params[:pet][:name]
       @pet.owner = @owner.id
       @pet.save
-    else 
+    else
       @pet.update(params[:pet])
     end
     redirect to "pets/#{@pet.id}"
