@@ -25,7 +25,7 @@ class OwnersController < ApplicationController
 
   patch '/owners/:id' do
     @owner = Owner.find(params[:id])
-
+    "Hello"
   end
 
   get '/owners/:id' do
