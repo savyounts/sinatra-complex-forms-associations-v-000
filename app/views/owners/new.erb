@@ -2,11 +2,10 @@
 
 <form action="/owners" method="POST">
   <label>Name:</label>
-
+<input type="text" name="owner[name]">
   <br></br>
 
-<label>Choose an existing pet:</label>
-  <input type="text" name="owner[name]">
+  <label>Choose an existing pet:</label>
   <% @pets.each do |pet| %>
     <input type="checkbox" name="owner[pet_ids][]" value="<%= pet.id %>" id="<%= pet.id %>"><%= pet.name %></input>
       <% end %>
