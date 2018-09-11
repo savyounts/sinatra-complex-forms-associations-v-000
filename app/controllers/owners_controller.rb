@@ -32,5 +32,5 @@ class OwnersController < ApplicationController
     erb :'/owners/show'
   end
 
-  
+
 end
