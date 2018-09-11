@@ -11,7 +11,6 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do
-
     if !params[:owner_name].empty?
       @owner =Owner.create(name: params[:owner_name])
       @pet = Pet.create(name: params[:pet][:name], owner_id: @owner.id)
@@ -19,6 +18,10 @@ class PetsController < ApplicationController
       @pet = Pet.create(params[:pet])
     end
     redirect to "pets/#{@pet.id}"
+  end
+
+  get '/pets/:id/edit'
+    erb :'/pets/edit'
   end
 
   get '/pets/:id' do
